@@ -7,7 +7,16 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+langchain-core = "^0.1.52"
+langchain-openai = "^0.1.6"
+langchain-community = "^0.0.38"
+langchain = "^0.1.19"
+python-dotenv = "^1.0.1"
+langchainhub = "^0.1.15"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
 
 [build-system]
 requires = ["poetry-core"]
