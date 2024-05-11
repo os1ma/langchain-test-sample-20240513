@@ -1,7 +1,7 @@
 from langchain_core.language_models import FakeMessagesListChatModel
 from langchain_core.messages import AIMessage, BaseMessage
 
-from src.generate_recipe_chain import GenerateRecipeChain
+from src.generate_markdown_recipe_chain import GenerateMarkdownRecipeChain
 
 
 def test_invoke() -> None:
@@ -22,7 +22,7 @@ def test_invoke() -> None:
 
     responses: list[BaseMessage] = [AIMessage(content=response)]
     llm = FakeMessagesListChatModel(responses=responses)
-    chain = GenerateRecipeChain(llm=llm)
+    chain = GenerateMarkdownRecipeChain(llm=llm)
     actual = chain.invoke(dish="カレー")
 
     expected = """## 材料

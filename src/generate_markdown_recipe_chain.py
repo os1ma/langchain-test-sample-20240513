@@ -44,7 +44,7 @@ def extract_codeblock(text: str) -> str:
         return text
 
 
-class GenerateRecipeChain:
+class GenerateMarkdownRecipeChain:
     def __init__(self, llm: BaseChatModel) -> None:
         self.llm = llm
 
@@ -63,6 +63,6 @@ class GenerateRecipeChain:
 
 if __name__ == "__main__":
     llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
-    chain = GenerateRecipeChain(llm=llm)
+    chain = GenerateMarkdownRecipeChain(llm=llm)
     ai_message = chain.invoke("カレー")
     print(ai_message)
