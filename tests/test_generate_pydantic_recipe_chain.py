@@ -28,4 +28,4 @@ def test_invoke() -> None:
     llm = FakeStructuredChatModel(responses=[response_recipe])
     chain = GeneratePydancitRecipeChain(llm=llm)
 
-    assert chain.invoke("カレー") == "response_recipe"
+    assert chain.invoke("カレー") == response_recipe
